@@ -1,0 +1,9 @@
+<!-- plantillas/saludo.html -->
+{% extends 'base.html' %}
+
+{% block titulo %}Saludo{% endblock titulo %}
+
+{% block contenido %}
+<h1>¡Hola, {{ nombre|title }}!</h1>
+<p>Esta página recibió tu nombre desde la URL.</p>
+{% endblock contenido %}

@@ -1,0 +1,17 @@
+<!-- plantillas/inicio.html -->
+{% extends 'base.html' %}
+
+{% block titulo %}Inicio{% endblock titulo %}
+
+{% block contenido %}
+<h1>Página de inicio</h1>
+<p>Hoy es {% now "DATE_FORMAT" %}.</p>
+<p>Estas son mis {{ habilidades|length }} habilidades principales:</p>
+<ul>
+  {% for habilidad in habilidades %}
+    <li>{{ habilidad }}</li>
+  {% endfor %}
+</ul>
+<p>{{ mensaje|lower|capfirst }}</p>
+{# Este comentario no aparece en la página #}
+{% endblock contenido %}

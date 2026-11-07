@@ -1,0 +1,9 @@
+# .gitignore
+.venv/
+__pycache__/
+db.sqlite3
+.env
+staticfiles/
+.vscode/
+.DS_Store
+PASOS-SERVIDOR.md

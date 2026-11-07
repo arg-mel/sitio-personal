@@ -1,0 +1,23 @@
+<!-- plantillas/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Mi sitio personal{% endblock titulo %}</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{% url 'inicio' %}">Inicio</a> |
+      <a href="{% url 'acerca_de' %}">Acerca de</a> |
+      <a href="{% url 'proyectos' %}">Proyectos</a> |
+      <a href="{% url 'cuadrado' 7 %}">Cuadrado</a>
+    </nav>
+  </header>
+  <main>
+    {% block contenido %}
+    {% endblock contenido %}
+  </main>
+</body>
+</html>

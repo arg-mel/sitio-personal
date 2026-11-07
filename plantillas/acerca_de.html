@@ -1,0 +1,14 @@
+<!-- plantillas/acerca_de.html -->
+{% extends 'base.html' %}
+
+{% block titulo %}Acerca de{% endblock titulo %}
+
+{% block contenido %}
+<h1>Acerca de mí</h1>
+<p>Me llamo {{ nombre }} y tengo {{ edad }} años.</p>
+{% if edad >= 18 %}
+  <p>Soy mayor de edad.</p>
+{% else %}
+  <p>Soy menor de edad.</p>
+{% endif %}
+{% endblock contenido %}

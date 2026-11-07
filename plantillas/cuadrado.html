@@ -1,0 +1,9 @@
+<!-- plantillas/cuadrado.html -->
+{% extends 'base.html' %}
+
+{% block titulo %}Cuadrado de {{ numero }}{% endblock titulo %}
+
+{% block contenido %}
+<h1>El cuadrado de {{ numero }} es {{ cuadrado }}</h1>
+<p>Cambia el número en la URL, por ejemplo <a href="{% url 'cuadrado' 12 %}">/cuadrado/12/</a>.</p>
+{% endblock contenido %}

@@ -1,0 +1,15 @@
+<!-- plantillas/proyectos.html -->
+{% extends 'base.html' %}
+
+{% block titulo %}Proyectos{% endblock titulo %}
+
+{% block contenido %}
+<h1>Proyectos</h1>
+<ul>
+  {% for proyecto in proyectos %}
+    <li><strong>{{ proyecto.nombre }}</strong>: {{ proyecto.descripcion }}</li>
+  {% empty %}
+    <li>Todavía no hay proyectos.</li>
+  {% endfor %}
+</ul>
+{% endblock contenido %}
