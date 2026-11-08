@@ -18,7 +18,7 @@ class VistaAcercaDe(TemplateView):
 
     def get_context_data(self, **kwargs):
         contexto = super().get_context_data(**kwargs)
-        contexto["nombre"] = "Melanie"
+        contexto["nombre"] = "Melanie A."
         contexto["edad"] = 22
         return contexto
 
@@ -29,7 +29,10 @@ class VistaProyectos(TemplateView):
     def get_context_data(self, **kwargs):
         contexto = super().get_context_data(**kwargs)
         contexto["proyectos"] = [
-            {"nombre": "Sitio personal", "descripcion": "Este sitio, hecho con Django."},
+            {
+                "nombre": "Sitio personal",
+                "descripcion": "Este sitio, hecho con Django.",
+            },
             {"nombre": "Tablero de mensajes", "descripcion": "Próximamente."},
             {"nombre": "Blog", "descripcion": "Próximamente."},
         ]
