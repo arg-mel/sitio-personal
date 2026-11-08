@@ -28,14 +28,7 @@ class VistaProyectos(TemplateView):
 
     def get_context_data(self, **kwargs):
         contexto = super().get_context_data(**kwargs)
-        contexto["proyectos"] = [
-            {
-                "nombre": "Sitio personal",
-                "descripcion": "Este sitio, hecho con Django.",
-            },
-            {"nombre": "Tablero de mensajes", "descripcion": "Próximamente."},
-            {"nombre": "Blog", "descripcion": "Próximamente."},
-        ]
+        contexto["proyectos"] = ["Tablero de mensajes", "Blog", "Periódico"]
         return contexto
 
 

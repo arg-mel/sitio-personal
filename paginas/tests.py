@@ -57,7 +57,8 @@ class PruebasPaginaProyectos(SimpleTestCase):
     def test_contenido_plantilla(self):
         respuesta = self.client.get(reverse("proyectos"))
         self.assertContains(respuesta, "<h1>Proyectos</h1>")
-        self.assertContains(respuesta, "Sitio personal")
+        self.assertContains(respuesta, "Hay 3 proyectos")
+        self.assertContains(respuesta, "TABLERO DE MENSAJES")
 
     def test_lista_vacia_muestra_mensaje(self):
         # Revisa el {% empty %} mostrando la plantilla sin proyectos

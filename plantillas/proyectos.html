@@ -5,9 +5,10 @@
 
 {% block contenido %}
 <h1>Proyectos</h1>
+<p>Hay {{ proyectos|length }} proyectos que me gustaría construir:</p>
 <ul>
   {% for proyecto in proyectos %}
-    <li><strong>{{ proyecto.nombre }}</strong>: {{ proyecto.descripcion }}</li>
+    <li>{{ proyecto|upper }}</li>
   {% empty %}
     <li>Todavía no hay proyectos.</li>
   {% endfor %}
