@@ -101,4 +101,4 @@ class PruebasMenu(SimpleTestCase):
         self.assertContains(respuesta, 'href="/"')
         self.assertContains(respuesta, 'href="/acerca-de/"')
         self.assertContains(respuesta, 'href="/proyectos/"')
-        self.assertContains(respuesta, 'href="/cuadrado/7/"')
+        self.assertContains(respuesta, 'href="/cuadrado/5/"')
